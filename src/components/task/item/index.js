@@ -1,17 +1,18 @@
 import React from "react"
-import { TouchableOpacity, Text, View } from "react-native"
+import { TouchableOpacity, Text, Button } from "react-native"
 import { styles } from "./style"
 
-    const TaskItem = ( {item, onHandleSelected} ) => {
+    const ItemComida = ( {item, eliminarComida} ) => {
+        
         return (
-            <View>
-                <TouchableOpacity style={styles.listItemContainer} onPress={() => onHandleSelected(item)}>
-                    <Text style={styles.listItem}>{item.value}</Text>
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity style = {styles.listItem}>
+                <Text style={styles.itemText}>{item.title}</Text>
+                <Text>{item.id}</Text>
+                <Button title='X' color={"#000"} style={styles.button} onPress={() => eliminarComida(item.id)}/>
+            </TouchableOpacity>
         )
     }
 
-export default TaskItem;   
+export default ItemComida;   
 
 

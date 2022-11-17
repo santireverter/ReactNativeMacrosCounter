@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F6F4F5',
+        backgroundColor: '#FFF',
     },
     listContainer: {
         marginHorizontal: 20,
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 10,
-        color: '#212121',
+        color: '#000',
     },
     modalContainer: {
         justifyContent: 'center',

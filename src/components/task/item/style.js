@@ -9,9 +9,23 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         marginVertical: 5,
     },
-    listItem:{
+    itemText:{
         fontSize: 14,
-        color: '#fff',
+        color: '#000',
         paddingHorizontal: 10,
+    },
+    listItem: {
+        backgroundColor: '#f9c2ff',
+        flexDirection: "row",
+        justifyContent: 'space-between',
+        alignItems: "center",
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+        borderRadius: 10,
+        elevation: 5,
+    },
+    button:{
+        borderRadius: 10,
     }
 })
