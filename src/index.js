@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Text, View, Button, FlatList, Modal, TouchableOpacity, TextInput } from 'react-native';
-import { styles } from './style.js'
-import { AddItem, TaskItem } from './components/index.js';
+import { Text, View, Button, Modal, FlatList,} from 'react-native';
+import { styles } from './style'
+import { AddItem, TaskItem } from './components/index';
 
 export default function App() {
 
@@ -10,11 +10,16 @@ const [taskList, setTaskList] = useState([]);
 const [modalVisible, setModalVisible] = useState(false);
 const [selectedTask, setSelectedTask] = useState(null);
 
+const array = [ 
+  {id: 1 , value: "pollo",},
+  {id: 2 , value: "carne",},
+  {id: 3 , value: "pescado",}
+];
+
+
 const addItem = () => {
   setTaskList((prevTaskList) => [...prevTaskList, {id: Math.random().toString(), value: task}]);
   setTask('');
-  console.log(task);
-  console.log(taskList);
 }
 
 const onHandleSelected = (item) => {
@@ -45,7 +50,7 @@ const onHandleChange = (text) => setTask(text);
       </View>
       <FlatList
         style={styles.listContainer}
-        data={taskList}
+        data={array}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
@@ -58,12 +63,12 @@ const onHandleChange = (text) => setTask(text);
           </View>
           <View style={styles.modalButtonContainer}>
             <Button
-              title='Cancel'
+              title='Cancelar'
               color='#9A848F'
               onPress={onHandleCancel}
             />
             <Button
-              title='Delete'
+              title='Eliminar'
               color='#9A848F'
               onPress={onHandleDeleteItem}
             />
