@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     itemText:{
         fontSize: 18,
         color: colors.textColor,
-        fontWeight: "bold",
+        fontFamily: 'Lato-Bold',
         paddingHorizontal: 10,
     },
     listItem: {
