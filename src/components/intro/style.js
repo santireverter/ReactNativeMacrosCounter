@@ -12,11 +12,11 @@ export const styles = StyleSheet.create({
     },
     title: {
         fontSize: 26,
-        fontWeight: 'bold',
+        fontFamily: 'Lato-Bold',
     },
     subTitle: {
         fontSize: 14,
-        fontWeight: 'bold',
+        fontFamily: 'Lato-Regular',
     },
 })
 
