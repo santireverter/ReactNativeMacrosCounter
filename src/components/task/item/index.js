@@ -7,7 +7,6 @@ import { styles } from "./style"
         return (
             <TouchableOpacity style = {styles.listItem}>
                 <Text style={styles.itemText}>{item.title}</Text>
-                <Text>{item.id}</Text>
                 <Button title='X' color={"#000"} style={styles.button} onPress={() => eliminarComida(item.id)}/>
             </TouchableOpacity>
         )

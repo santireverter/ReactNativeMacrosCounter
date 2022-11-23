@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import colors from "../../../constants/colors";
 
 export const styles = StyleSheet.create({
     listItemContainer: {
@@ -10,12 +11,13 @@ export const styles = StyleSheet.create({
         marginVertical: 5,
     },
     itemText:{
-        fontSize: 14,
-        color: '#000',
+        fontSize: 18,
+        color: colors.textColor,
+        fontWeight: "bold",
         paddingHorizontal: 10,
     },
     listItem: {
-        backgroundColor: '#f9c2ff',
+        backgroundColor: colors.primary,
         flexDirection: "row",
         justifyContent: 'space-between',
         alignItems: "center",

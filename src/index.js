@@ -1,46 +1,24 @@
-import { useEffect, useState } from 'react';
-import { Text, View, Button, Modal, FlatList, TouchableOpacity, } from 'react-native';
+import {  useState } from 'react';
+import { View, } from 'react-native';
 import { styles } from './style'
-import { AddItem, ItemComida } from './components/index';
+import { Inicio, Lista } from './screens';
 
 export default function App() {
 
-  const [food, setFood] = useState('');
-  const [foodList, setFoodList] = useState([]);
+    const [comenzar, setComenzar] = useState(false);
 
-  const valueInput = (text) => {
-    setFood(text);
-  }
+    const comenzarEnlistado = () => {
+        setComenzar(true);
+    }
 
-  const agregarComida = () => {
-    setFoodList([...foodList, { id: Math.random(), title: food }]);
-    setFood('');
-  }
+    let contenido = <Inicio comenzarEnlistado={comenzarEnlistado}/>;
+    if (comenzar === true){
+        contenido = <Lista/>;
+    }
 
-  const eliminarComida = (id) => {
-    setFoodList(foodList.filter((comida) => comida.id !== id))
-    console.log(foodList)
-  }
-  
-
-  const renderItem = ({ item }) => {
     return (
-      <ItemComida item={item} eliminarComida={eliminarComida}/>
-    )
-  };
-
-
-  return (
     <View style={styles.container}>
-      <AddItem food={food} agregarComida={agregarComida} onHandleChange={valueInput} />
-      <View style={styles.listContainer}>
-        <Text style={styles.listTitle}>Lista de Comidas</Text>
-      </View>
-      <FlatList
-        data={foodList}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-      />
+        {contenido}
     </View>
-  );
+    );
 }
