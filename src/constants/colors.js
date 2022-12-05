@@ -4,4 +4,6 @@ export default {
     textColor: "#FFFFFF",
     borderColor: "#000000",
     backgroundColor: "#FFFFFF",
+    primaryPress: "#202436",
+    backgroundModal: "#272D2D"
 }

@@ -4,7 +4,7 @@ import { AddItem, ItemComida } from '../../components';
 import { styles } from './style';
 
 
-const Lista = ({ navigation }) => {
+const Lista = () => {
 
     const [food, setFood] = useState('');
     const [foodList, setFoodList] = useState([]);

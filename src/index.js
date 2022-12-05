@@ -2,7 +2,6 @@ import {  useState } from 'react';
 import { ActivityIndicator, View, } from 'react-native';
 import { styles } from './style'
 import { useFonts } from 'expo-font';
-import colors from './constants/colors';
 import AppNavigator from '../src/navigation/index';
 
 

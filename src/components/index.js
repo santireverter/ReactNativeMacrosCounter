@@ -1,3 +1,5 @@
 export { default as AddItem } from './add-item/index'
-export { default as ItemComida } from './task/item/index'
+export { default as ItemComida } from './task/itemComida/index'
 export { default as Intro } from './intro/index'
+export { default as NutritionFacts } from './nutritionFacts/index'
+export { default as CloseModal } from './closeModal/index'

@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     listItem: {
-        backgroundColor: colors.primary,
         flexDirection: "row",
         justifyContent: 'space-between',
         alignItems: "center",
