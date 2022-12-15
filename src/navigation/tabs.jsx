@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AppNavigation from "./appNavigation";
 import ComidasCargadasNavigation from "./comidasCargadas";
 import { Ionicons } from '@expo/vector-icons';
-import colors from "../constants/colors";
+import colors from "../constants/theme/colors";
 
 const BottomTab = createBottomTabNavigator();
 

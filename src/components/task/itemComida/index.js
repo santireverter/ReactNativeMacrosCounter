@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { TouchableOpacity, Text, Button, View, Pressable } from "react-native"
-import colors from "../../../constants/colors";
+import { Text, View, Pressable } from "react-native"
+import colors from "../../../constants/theme/colors";
 import {NutritionFacts, CloseModal} from "../../index";
 import { styles } from "./style"
 

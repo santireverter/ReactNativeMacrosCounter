@@ -1,0 +1,1 @@
+export { default as comidasPrecargadasReducer} from './comidasPrecargadas.reducer'

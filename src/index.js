@@ -1,8 +1,9 @@
-import {  useState } from 'react';
 import { ActivityIndicator, View, } from 'react-native';
 import { styles } from './style'
 import { useFonts } from 'expo-font';
 import AppNavigator from '../src/navigation/index';
+import { Provider } from 'react-redux';
+import  store  from './store'
 
 
 export default function App() {
@@ -23,7 +24,9 @@ export default function App() {
 
     return (
     <View style={styles.container}>
-        <AppNavigator/>
+        <Provider store={store}>
+            <AppNavigator/>
+        </Provider>
     </View>
     );
 }

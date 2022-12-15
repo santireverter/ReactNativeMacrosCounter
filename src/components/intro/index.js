@@ -1,5 +1,5 @@
 import { View, Text, Button } from "react-native";
-import colors from "../../constants/colors";
+import colors from "../../constants/theme/colors";
 import { styles } from "./style";
 
 const Intro = ({navigation}) =>{

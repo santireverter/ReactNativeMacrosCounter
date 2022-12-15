@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../constants/colors";
+import colors from "../../constants/theme/colors";
 
 export const styles = StyleSheet.create({
     modalContainer:{
@@ -28,5 +28,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'Lato-Regular',
         fontSize: 18,
         color: colors.textColor,
+        paddingLeft: 10,
+        paddingRight: 10,
     }
 })
