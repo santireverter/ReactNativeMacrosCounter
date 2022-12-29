@@ -3,12 +3,13 @@ import colors from "../../constants/theme/colors";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
         marginBottom: 20,
+        height: 280,
     },
     preview: {
         width: '100%',
         height: 200,
+        marginTop: 20,
         marginBottom: 20,
         justifyContent: 'center',
         alignItems: 'center',

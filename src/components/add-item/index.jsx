@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Button, TextInput, View } from 'react-native';
+import { Button, Keyboard, TextInput, TouchableWithoutFeedback, View } from 'react-native';
 import colors from '../../constants/theme/colors.js';
 import { FoodContext } from '../../context/FoodContext.jsx';
 import AddImage from '../add-image/index.jsx';
@@ -22,7 +22,8 @@ const AddItem = () => {
     }
 
     return (
-        <View style={styles.inputContainer}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.inputContainer} >
             <TextInput
                 style={styles.input}
                 value={foodName}
@@ -50,6 +51,7 @@ const AddItem = () => {
             <AddImage onImagePicker={onImagePicker}/>
             <Button disabled={checkFood()} title='Agregar' onPress={agregarComida} color={colors.primary} />
         </View>
+        </TouchableWithoutFeedback>
     )
 }
 
