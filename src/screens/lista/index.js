@@ -1,23 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FlatList, Text, View } from 'react-native';
-import { AddImage, AddItemName, ItemComida } from '../../components';
+import { AddImage, AddItem, ItemComida } from '../../components';
+import { FoodContext } from '../../context/FoodContext';
 import { styles } from './style';
 
 
 const Lista = () => {
 
-    const [food, setFood] = useState('');
-    const [foodList, setFoodList] = useState([]);
-    const [image, setImage] = useState(null);
-
-    // const agregarComida = () => {
-    //     setFoodList([...foodList, { id: Math.random(), title: food }]);
-    //     setFood('');
-    // }
-
-    // const valueInput = (text) => {
-    //     setFood(text);
-    // }
+    const { foodList, setFoodList } = useContext(FoodContext);
 
     const eliminarComida = (id) => {
         setFoodList(foodList.filter((comida) => comida.id !== id))
@@ -28,10 +18,6 @@ const Lista = () => {
             <ItemComida item={item} eliminarComida={eliminarComida}/>
         )
     };
-
-    // const onImagePicker = (uri) =>{
-    //     setImage(uri);
-    // }
 
     return(
         <View style={styles.container}>

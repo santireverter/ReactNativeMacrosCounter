@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import AppNavigator from '../src/navigation/index';
 import { Provider } from 'react-redux';
 import  store  from './store'
+import { FoodProvider } from './context/FoodContext';
 
 
 export default function App() {
@@ -24,9 +25,11 @@ export default function App() {
 
     return (
     <View style={styles.container}>
+        <FoodProvider>
         <Provider store={store}>
             <AppNavigator/>
         </Provider>
+        </FoodProvider>
     </View>
     );
 }
