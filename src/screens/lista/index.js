@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FlatList, Text, View } from 'react-native';
-import { AddItem, ItemComida } from '../../components';
+import { AddImage, AddItem, ItemComida } from '../../components';
 import { styles } from './style';
 
 
@@ -31,6 +31,7 @@ const Lista = () => {
     return(
         <View style={styles.container}>
             <AddItem food={food} agregarComida={agregarComida} onHandleChange={valueInput}/>
+            <AddImage />
             <View style={styles.listContainer}>
                 <Text style= {styles.listTitle}>Lista de comidas</Text>
             </View>
